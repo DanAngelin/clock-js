@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to left,#311E3E, #512645);
+}
+
+h1 {
+    color:#DF405A;
+    font-size: 2em;
+    margin: 1em;
+    letter-spacing: 0.1em;
+}
+
+.clock {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    background-color: #311E3E;
+    width: 22em;
+    padding: 1em 2em;
+    border: 0.2em solid #DF405A;
+    border-radius: 0.2em;
+}
+
+#date {
+    font-size: 1.5em;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+}
+
+#time {
+    font-size: 2.5em;
+}
