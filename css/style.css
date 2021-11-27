@@ -1,13 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Orbitron', sans-serif;
 }
 
 body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    height: 100vh;
     background: linear-gradient(to left,#311E3E, #512645);
 }
 
@@ -29,6 +34,12 @@ h1 {
     padding: 1em 2em;
     border: 0.2em solid #DF405A;
     border-radius: 0.2em;
+    -webkit-box-reflect: below 0.1em linear-gradient(transparent, rgba(255, 255, 255, 0.5));
+}
+
+.clock:hover {
+    background-color: #DF405A;
+    box-shadow: 0 0 2em #DF405A;
 }
 
 #date {
