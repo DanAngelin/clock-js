@@ -34,7 +34,7 @@ h1 {
     padding: 1em 2em;
     border: 0.2em solid #DF405A;
     border-radius: 0.2em;
-    -webkit-box-reflect: below 0.1em linear-gradient(transparent, rgba(255, 255, 255, 0.5));
+    -webkit-box-reflect: below 0.1em linear-gradient(transparent, rgba(255, 255, 255, 0.1));
 }
 
 .clock:hover {
@@ -50,4 +50,16 @@ h1 {
 
 #time {
     font-size: 2.5em;
+}
+
+.clockutc {
+    color: #fff;
+    background-color: #311E3E;
+    width: 18em;
+    text-align: center;
+    padding: 1em;
+    border: 0.2em solid #DF405A;
+    border-radius: 0.2em;
+    letter-spacing: 0.1em;
+    margin: 1em 0;
 }
