@@ -21,6 +21,7 @@ h1 {
     font-size: 2em;
     margin: 1em;
     letter-spacing: 0.1em;
+    text-align: center;
 }
 
 .clock {
@@ -40,6 +41,7 @@ h1 {
 .clock:hover, .clockutc:hover, .clocknewyork:hover, .clocktokyo:hover {
     background-color: #DF405A;
     box-shadow: 0 0 2em #DF405A;
+    transition: 2s;
 }
 
 #date {

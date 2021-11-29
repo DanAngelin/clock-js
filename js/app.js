@@ -42,3 +42,56 @@ function clockJs() {
     document.querySelector('#dateutc').innerText = `${dayUTC} ${dateUTC} ${monthUTC} ${yearUTC}` ;
     document.querySelector('#timeutc').innerText = `${hourUTC} : ${minuteUTC} : ${secondUTC} UTC` ;
 }
+
+setInterval(clockTimezone, 1000)
+
+function clockTimezone() {
+    const timezone = new Date();
+
+
+    // method for let utc find from stackoverflow
+    let utc = timezone.getTime() + (timezone.getTimezoneOffset() * 60000);
+    let newYork = new Date(utc + (3600000 * -5));
+    let tokyo = new Date( utc + (3600000 * 9));
+
+    let dateNewYork = newYork.getDate()
+    let dateTokyo = tokyo.getDate();
+    dateNewYork = (dateNewYork < 10 ? "0" : "") + dateNewYork;
+    dateTokyo = (dateTokyo < 10 ? "0" : "") + dateTokyo;
+
+    let dayNewYork = newYork.getDay();
+    let dayTokyo = tokyo.getDay();
+    let daysArray = ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"];
+    dayNewYork = daysArray[dayNewYork];
+    dayTokyo = daysArray[dayTokyo];
+
+    let monthNewYork = newYork.getMonth();
+    let monthTokyo = tokyo.getMonth();
+    let monthsArray = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    monthNewYork = monthsArray[monthNewYork];
+    monthTokyo = monthsArray[monthTokyo];
+
+    let yearNewYork = newYork.getFullYear();
+    let yearTokyo = tokyo.getFullYear();
+
+    let hourNewYork = newYork.getHours();
+    let hourTokyo = tokyo.getHours();
+    let minuteNewYork = newYork.getMinutes();
+    let minuteTokyo = tokyo.getMinutes();
+    let secondNewYork = newYork.getSeconds();
+    let secondTokyo = tokyo.getSeconds();
+
+    hourNewYork = (hourNewYork < 10 ? "0" : "") + hourNewYork;
+    minuteNewYork = (minuteNewYork < 10 ? "0" : "") + minuteNewYork;
+    secondNewYork = (secondNewYork < 10 ? "0" : "") + secondNewYork;
+    hourTokyo = (hourTokyo < 10 ? "0" : "") + hourTokyo;
+    minuteTokyo = (minuteTokyo < 10 ? "0" : "") + minuteTokyo;
+    secondTokyo = (secondTokyo < 10 ? "0" : "") + secondTokyo;
+
+
+
+    document.querySelector('#datenewyork').innerText = `${dayNewYork} ${dateNewYork} ${monthNewYork} ${yearNewYork}`
+    document.querySelector('#timenewyork').innerText = `${hourNewYork} : ${minuteNewYork} : ${secondNewYork} New York`
+    document.querySelector('#datetokyo').innerText = `${dayTokyo} ${dateTokyo} ${monthTokyo} ${yearTokyo}`;
+    document.querySelector('#timetokyo').innerText = `${hourTokyo} : ${minuteTokyo} : ${secondTokyo} Tokyo`;
+}
