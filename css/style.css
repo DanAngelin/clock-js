@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
 
+:root {
+    --hover-clock: #DF405A;
+    --background-clock: #311E3E;
+    --color-text: #fff;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -17,7 +23,7 @@ body {
 }
 
 h1 {
-    color:#DF405A;
+    color:var(--hover-clock);
     font-size: 2em;
     margin: 1em;
     letter-spacing: 0.1em;
@@ -29,18 +35,19 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #fff;
-    background-color: #311E3E;
-    width: 22em;
+    color: var(--color-text);
+    background-color: var(--background-clock);
+    width: 25em;
     padding: 1em 2em;
-    border: 0.2em solid #DF405A;
+    border: 0.2em solid var(--hover-clock);
     border-radius: 0.2em;
     -webkit-box-reflect: below 0.1em linear-gradient(transparent, rgba(255, 255, 255, 0.1));
+    position: relative;
 }
 
 .clock:hover, .clockutc:hover, .clocknewyork:hover, .clocktokyo:hover {
-    background-color: #DF405A;
-    box-shadow: 0 0 2em #DF405A;
+    background-color: var(--hover-clock);
+    box-shadow: 0 0 2em var(--hover-clock);
     transition: 2s;
 }
 
@@ -55,12 +62,12 @@ h1 {
 }
 
 .clockutc, .clocknewyork, .clocktokyo {
-    color: #fff;
-    background-color: #311E3E;
+    color: var(--color-text);
+    background-color: var(--background-clock);
     width: 18em;
     text-align: center;
     padding: 1em;
-    border: 0.2em solid #DF405A;
+    border: 0.2em solid var(--hover-clock);
     border-radius: 0.2em;
     letter-spacing: 0.1em;
     margin: 1em;
