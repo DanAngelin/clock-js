@@ -1,4 +1,3 @@
-setInterval(clockJs, 1000)
 
 function clockJs() {
     const clock = new Date();
@@ -38,7 +37,7 @@ function clockJs() {
     document.querySelector('.year').textContent = ` ${year} `;
 }
 
-setInterval(clockTimezone, 1000)
+setInterval(clockJs, 1000);
 
 function clockTimezone() {
     const timezone = new Date();
@@ -46,7 +45,7 @@ function clockTimezone() {
 
     // method for let utc find from stackoverflow
     let utc = timezone.getTime() + (timezone.getTimezoneOffset() * 60000);
-    let newYork = new Date(utc + (3600000 * -5));
+    let newYork = new Date(utc + (3600000 * -4));
     let tokyo = new Date( utc + (3600000 * 9));
 
     let dateNewYork = `${newYork.getDate()}`.padStart(2, 0); //Date NewYork
@@ -80,4 +79,6 @@ function clockTimezone() {
     document.querySelector('#timenewyork').textContent = `${hourNewYork} : ${minuteNewYork} : ${secondNewYork} New York`
     document.querySelector('#datetokyo').textContent = `${dayTokyo} ${dateTokyo} ${monthTokyo} ${yearTokyo}`;
     document.querySelector('#timetokyo').textContent = `${hourTokyo} : ${minuteTokyo} : ${secondTokyo} Tokyo`;
-}
+};
+
+setInterval(clockTimezone, 1000);
